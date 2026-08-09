@@ -21,6 +21,20 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.ssh/
+.netrc
+.npmrc
+.pypirc
+
+# local credentials and secret bundles
+credentials/
+secrets/
+*.secrets.*
 
 # debug
 npm-debug.log*
@@ -28,8 +42,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# environment files — commit the blank template only
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!*.env.example
 
 # vercel
 .vercel

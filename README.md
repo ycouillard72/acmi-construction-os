@@ -65,11 +65,15 @@ Do not expose `SUPABASE_SERVICE_ROLE_KEY` or any provider secret to browser code
 |---|---|---|
 | `DATABASE_URL` | Server-side PostgreSQL connection | Optional / unused in demo mode |
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL | Optional / unused in demo mode |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Public Supabase client key | Optional / unused in demo mode |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Public Supabase browser key | Optional / unused in demo mode |
 | `SUPABASE_SERVICE_ROLE_KEY` | Privileged onboarding/background work | Placeholder; server only |
+| `SUPABASE_PROJECT_REF` | Supabase project identifier for deployment tooling | Placeholder only |
+| `DIRECT_URL` | Direct PostgreSQL connection for migrations | Placeholder; server/tooling only |
 | `NEXT_PUBLIC_APP_URL` | Canonical app origin | Defaults to local development |
 | `DEFAULT_TENANT_SLUG` | Initial tenant lookup | `acmi-construction` |
 | `APP_ENCRYPTION_KEY` | Application-managed encryption if needed | Placeholder |
+| `NODE_ENV` / `PORT` | Hostinger Node.js runtime settings | Production template values included |
+| `HOSTINGER_API_TOKEN` / `HOSTINGER_VM_ID` | Optional future VPS deployment automation | Not needed for normal hPanel GitHub deployment |
 | `MICROSOFT_*` | Microsoft Entra/Graph and SharePoint setup | Placeholders only |
 | `EMAIL_*` | Transactional email provider | Placeholders only |
 | `WEBHOOK_SIGNING_SECRET` | Signed inbound/outbound automation events | Placeholder only |
@@ -112,4 +116,3 @@ This application is the command, visibility, and workflow layer. Until deliberat
 7. **Automation + AI:** signed webhooks, Power Automate flows, permission-aware search, project summaries, draft communications, and human approval gates.
 
 See `docs/ARCHITECTURE.md` for deeper component, security, integration, and deployment decisions.
-
